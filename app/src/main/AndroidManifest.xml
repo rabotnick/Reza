@@ -44,6 +44,23 @@
             android:name=".LanguageSection"
             android:label="@string/title_activity_language_section" >
         </activity>
+        <activity
+            android:name=".CreatedResume"
+            android:label="@string/title_activity_created_resume" >
+        </activity>
+        <activity
+            android:name=".Nfc"
+            android:label="@string/title_activity_nfc" >
+        </activity>
+
+        <uses-permission android:name="android.permission.NFC"/>
+
+        <uses-feature
+            android:name="android.hardware.nfc"
+            android:required="false"/>
+
     </application>
+
+
 
 </manifest>
