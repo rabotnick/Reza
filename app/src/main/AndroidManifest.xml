@@ -16,6 +16,34 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".NewResume"
+            android:label="@string/title_activity_new_resume" >
+        </activity>
+        <activity
+            android:name=".GeneralSection"
+            android:label="@string/title_activity_general_section" >
+        </activity>
+        <activity
+            android:name=".EducationSection"
+            android:label="@string/title_activity_education_section" >
+        </activity>
+        <activity
+            android:name=".SkillSection"
+            android:label="@string/title_activity_skill_section" >
+        </activity>
+        <activity
+            android:name=".ExperienceSection"
+            android:label="@string/title_activity_experience_section" >
+        </activity>
+        <activity
+            android:name=".CertificationSection"
+            android:label="@string/title_activity_certification_section" >
+        </activity>
+        <activity
+            android:name=".LanguageSection"
+            android:label="@string/title_activity_language_section" >
+        </activity>
     </application>
 
 </manifest>
