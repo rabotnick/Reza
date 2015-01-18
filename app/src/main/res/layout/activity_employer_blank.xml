@@ -5,13 +5,15 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context="com.rabotnickstudios.reza.EmployerBlank"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:weightSum="1"
+    android:background="@drawable/greengradient">
 
-    <TextView android:text="Employers:" android:layout_width="match_parent"
+    <TextView android:text="Employers" android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:gravity="center"
-        />
+        android:layout_marginBottom="8dp" />
 
     <TextView
         android:layout_width="match_parent"
@@ -20,7 +22,8 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Using Reza, you can collect applications from top talent in a matter of seconds! To get started, simply enter your companies details and tap the Receive button below to receive your first application."
         android:id="@+id/textView"
-        android:gravity="center"/>
+        android:gravity="center"
+        android:layout_marginBottom="8dp" />
 
     <LinearLayout
         android:orientation="horizontal"
@@ -92,13 +95,27 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="After your first use, Reza automatically stores your companies details for future use, as well as resumes from applicants."
 
-        android:gravity="center"/>
+        android:gravity="center"
+        android:layout_marginTop="15dp"
+        android:layout_weight="0.21" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.67" />
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="Receive"
         android:id="@+id/button"
-        android:layout_gravity="center_horizontal" />
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp"
+        android:layout_weight="0.07"
+        android:background="@drawable/buttontransparent"
+        android:textColor="#42ff23"
+        android:textStyle="bold|italic"
+        android:textSize="18dp" />
 
 </LinearLayout>
