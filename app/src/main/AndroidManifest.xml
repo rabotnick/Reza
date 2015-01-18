@@ -75,6 +75,14 @@
             android:name=".ProfileDbHelper"
             android:label="@string/title_activity_profile_db_helper" >
         </activity>
+        <activity
+            android:name=".NewAction"
+            android:label="@string/title_activity_new_action" >
+        </activity>
+        <activity
+            android:name=".EditProfile"
+            android:label="@string/title_activity_edit_profile" >
+        </activity>
     </application>
 
 </manifest>

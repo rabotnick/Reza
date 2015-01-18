@@ -21,7 +21,7 @@ public class MainActivity extends ActionBarActivity {
     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        boolean exists = getApplicationContext().getDatabasePath("FeedReader.db").exists();
+        boolean exists = getApplicationContext().getDatabasePath("Profile.db").exists();
         if(!exists) {
             Intent i = new Intent(getApplicationContext(), NewProfile.class);
             startActivity(i);

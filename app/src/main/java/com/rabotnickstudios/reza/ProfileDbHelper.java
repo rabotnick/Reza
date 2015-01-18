@@ -1,6 +1,7 @@
 package com.rabotnickstudios.reza;
 
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.support.v7.app.ActionBarActivity;
@@ -61,4 +62,10 @@ public class ProfileDbHelper extends SQLiteOpenHelper {
     public void onDowngrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         onUpgrade(db, oldVersion, newVersion);
     }
+
+    /*public static String getData(String col) {
+        String query = "SELECT " + col + " FROM profile";
+        SQLiteDatabase db = getReadableDatabase();
+        return db.rawQuery(query, null).toString();
+    }*/
 }

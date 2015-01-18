@@ -1,0 +1,63 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.rabotnickstudios.reza.NewAction"
+    android:background="#ffffc77d">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:weightSum="1"
+        android:layout_alignParentEnd="false">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Hi, "
+            android:id="@+id/textGreeting"
+            android:textSize="30dp" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="VIEW/EDIT PROFILE"
+            android:id="@+id/editButton"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.11"
+            android:textSize="22dp" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SENT RESUMES"
+            android:id="@+id/sentButton"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.12"
+            android:textSize="22dp" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="RECEIVED RESUMES"
+            android:id="@+id/receivedButton"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.14"
+            android:textSize="22dp" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SEND YOUR RESUME"
+            android:id="@+id/sendButton"
+            android:layout_weight="0.20"
+            android:textSize="22dp" />
+
+    </LinearLayout>
+</RelativeLayout>

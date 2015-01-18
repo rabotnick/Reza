@@ -22,5 +22,7 @@
     <string name="title_activity_employer_db_helper">EmployerDbHelper</string>
     <string name="title_activity_new_profile">NewProfile</string>
     <string name="title_activity_profile_db_helper">ProfileDbHelper</string>
+    <string name="title_activity_new_action">NewAction</string>
+    <string name="title_activity_edit_profile">EditProfile</string>
 
 </resources>

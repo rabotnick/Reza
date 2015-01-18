@@ -36,7 +36,7 @@ public class GeneralSection extends ActionBarActivity {
             @Override
             public void onClick(View v) {
 
-                EmployerDbHelper mDbHelper = new EmployerDbHelper(getApplicationContext());
+                ProfileDbHelper mDbHelper = new ProfileDbHelper(getApplicationContext());
                 SQLiteDatabase db = mDbHelper.getWritableDatabase();
                 ContentValues values = new ContentValues();
                 values.put(ProfileDbHelper.COLUMN_NAME, nameField.getText().toString());
