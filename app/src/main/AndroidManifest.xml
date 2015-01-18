@@ -53,14 +53,28 @@
             android:label="@string/title_activity_nfc" >
         </activity>
 
-        <uses-permission android:name="android.permission.NFC"/>
+        <uses-permission android:name="android.permission.NFC" />
 
         <uses-feature
             android:name="android.hardware.nfc"
-            android:required="false"/>
+            android:required="false" />
 
+        <activity
+            android:name=".EmployerBlank"
+            android:label="@string/title_activity_employer_blank" >
+        </activity>
+        <activity
+            android:name=".EmployerDbHelper"
+            android:label="@string/title_activity_employer_db_helper" >
+        </activity>
+        <activity
+            android:name=".NewProfile"
+            android:label="@string/title_activity_new_profile" >
+        </activity>
+        <activity
+            android:name=".ProfileDbHelper"
+            android:label="@string/title_activity_profile_db_helper" >
+        </activity>
     </application>
-
-
 
 </manifest>

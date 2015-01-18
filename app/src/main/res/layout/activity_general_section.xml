@@ -4,23 +4,26 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="com.rabotnickstudios.reza.GeneralSection">
+    tools:context="com.rabotnickstudios.reza.GeneralSection"
+    android:background="@color/material_deep_teal_500">
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" >
+        android:layout_alignParentStart="true"
+        android:weightSum="1">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="283dp"
             android:layout_height="wrap_content"
             android:text="GENERAL INFO:"
             android:id="@+id/textView2"
             android:textStyle="bold"
-            android:textSize="18dp"
-            android:inputType="none" />
+            android:textSize="32dp"
+            android:inputType="none"
+            android:layout_weight="0.06" />
 
         <EditText
             android:layout_width="match_parent"
@@ -28,14 +31,14 @@
             android:inputType="textPersonName"
             android:text="Name"
             android:ems="10"
-            android:id="@+id/editText5" />
+            android:id="@+id/editName" />
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textEmailAddress"
             android:ems="10"
-            android:id="@+id/editText6"
+            android:id="@+id/editEmail"
             android:text="Email" />
 
         <EditText
@@ -43,7 +46,7 @@
             android:layout_height="wrap_content"
             android:inputType="phone"
             android:ems="10"
-            android:id="@+id/editText7"
+            android:id="@+id/editPhone"
             android:text="Phone" />
 
         <EditText
@@ -51,8 +54,33 @@
             android:layout_height="wrap_content"
             android:inputType="textPostalAddress"
             android:ems="10"
-            android:id="@+id/editText8"
+            android:id="@+id/editAddress"
             android:text="Address" />
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Recruiter"
+            android:id="@+id/recruiter"
+            android:layout_weight="0.05"
+            android:checked="false"
+            android:textSize="24dp" />
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Job Seeker"
+            android:id="@+id/jobSeeker"
+            android:textSize="24dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Next"
+            android:id="@+id/nextButton"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.06"
+            android:textSize="18dp" />
     </LinearLayout>
 
 </RelativeLayout>

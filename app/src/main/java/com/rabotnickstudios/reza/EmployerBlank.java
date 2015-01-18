@@ -2,6 +2,7 @@ package com.rabotnickstudios.reza;
 
 import android.content.ContentValues;
 import android.content.Intent;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -9,29 +10,25 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
 
 
-public class GeneralSection extends ActionBarActivity {
+public class EmployerBlank extends ActionBarActivity {
 
     public static final int DATABASE_VERSION = 1;
-    public static final String DATABASE_NAME = "Profile.db";
+    public static final String DATABASE_NAME = "FeedReader.db";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_general_section);
-        final EditText nameField = (EditText)findViewById(R.id.editName);
-        final EditText emailField = (EditText)findViewById(R.id.editEmail);
-        final EditText phoneField = (EditText)findViewById(R.id.editPhone);
-        final EditText addressField = (EditText)findViewById(R.id.editAddress);
+        setContentView(R.layout.activity_employer_blank);
+        final EditText companyField = (EditText)findViewById(R.id.editText);
+        final EditText repField = (EditText)findViewById(R.id.editText2);
+        final EditText emailField = (EditText)findViewById(R.id.editText3);
 
-        final CheckBox recruiter = (CheckBox)findViewById(R.id.recruiter);
-        final CheckBox jobSeeker = (CheckBox)findViewById(R.id.jobSeeker);
-
-        Button button = (Button)findViewById(R.id.nextButton);
+        Button button = (Button)findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -39,33 +36,28 @@ public class GeneralSection extends ActionBarActivity {
                 EmployerDbHelper mDbHelper = new EmployerDbHelper(getApplicationContext());
                 SQLiteDatabase db = mDbHelper.getWritableDatabase();
                 ContentValues values = new ContentValues();
-                values.put(ProfileDbHelper.COLUMN_NAME, nameField.getText().toString());
-                values.put(ProfileDbHelper.COLUMN_EMAIL, emailField.getText().toString());
-                values.put(ProfileDbHelper.COLUMN_PHONE, phoneField.getText().toString());
-                values.put(ProfileDbHelper.COLUMN_ADDRESS, addressField.getText().toString());
-                values.put(ProfileDbHelper.COLUMN_RECRUITER,
-                        Boolean.toString(recruiter.isChecked()));
-                values.put(ProfileDbHelper.COLUMN_JOBSEEKER,
-                        Boolean.toString(jobSeeker.isChecked()));
+                values.put(EmployerDbHelper.COLUMN_NAME_COMPANY, companyField.getText().toString());
+                values.put(EmployerDbHelper.COLUMN_NAME_REP, repField.getText().toString());
+                values.put(EmployerDbHelper.COLUMN_NAME_EMAIL, emailField.getText().toString());
 
                 db.insert(
-                        ProfileDbHelper.TABLE_NAME,
+                        EmployerDbHelper.TABLE_NAME,
                         null,
                         values);
                 Toast.makeText(getApplicationContext(), "Success?", Toast.LENGTH_SHORT).show();
-
-                Intent i = new Intent(getApplicationContext(), EducationSection.class);
-                startActivity(i);
             }
         });
+// How you want the results sorted in the resulting Cursor
 
+        //Cursor c=db.rawQuery("SELECT * FROM employer", null);
     }
+
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_general_section, menu);
+        getMenuInflater().inflate(R.menu.menu_employer_blank, menu);
         return true;
     }
 

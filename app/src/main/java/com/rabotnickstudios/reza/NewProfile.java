@@ -1,7 +1,7 @@
 package com.rabotnickstudios.reza;
 
 import android.content.Intent;
-import android.os.Environment;
+import android.provider.MediaStore;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -9,53 +9,35 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
+import java.io.BufferedWriter;
 import java.io.File;
+import java.nio.charset.Charset;
 
 
-public class MainActivity extends ActionBarActivity {
+public class NewProfile extends ActionBarActivity {
 
-    /* String path = Environment.getExternalStorageDirectory().getAbsolutePath() +
-            "/Android/data/myapp/files/myrezaprofile.txt";
-
-    boolean exists = (new File(path)).exists();
-    */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        boolean exists = getApplicationContext().getDatabasePath("FeedReader.db").exists();
-        if(!exists) {
-            Intent i = new Intent(getApplicationContext(), NewProfile.class);
-            startActivity(i);
-        } else {
-            Intent i = new Intent(getApplicationContext(), NewAction.class);
-            startActivity(i);
-        }
-        /* super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_new_profile);
         Button button = (Button)findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(), NewResume.class);
+                /*File profile = new File("/Android/data/myapp/files/myrezaprofile.txt");
+                Charset charset = Charset.forName("US-ASCII");
+                BufferedWriter writer = Files.newBufferedWriter(profile, charset);*/
+                Intent i = new Intent(getApplicationContext(), GeneralSection.class);
                 startActivity(i);
             }
         });
-
-        Button button2 = (Button)findViewById(R.id.button2);
-        button2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(), CreatedResume.class);
-                startActivity(i);
-            }
-        }); */
-
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        getMenuInflater().inflate(R.menu.menu_new_profile, menu);
         return true;
     }
 

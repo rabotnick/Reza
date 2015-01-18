@@ -29,7 +29,8 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="List skills here"
             android:id="@+id/textView3"
-            android:layout_weight="0.83" />
+            android:layout_weight="0.83"
+            android:editable="true" />
 
 
     </LinearLayout>

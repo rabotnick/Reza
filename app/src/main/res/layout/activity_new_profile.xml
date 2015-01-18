@@ -29,5 +29,13 @@
             android:textStyle="bold"
             android:textIsSelectable="false" />
 
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Create Profile"
+            android:id="@+id/button"
+            android:layout_weight="0.36"
+            android:textSize="36dp" />
+
     </LinearLayout>
 </RelativeLayout>
